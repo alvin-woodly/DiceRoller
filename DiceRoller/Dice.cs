@@ -12,7 +12,7 @@ namespace DiceRoller
         
          public int RollDice(int numberOfSides)
         {
-            return  random.Next(1,numberOfSides);
+            return  random.Next(1,numberOfSides +1);
         }
     }
 }
