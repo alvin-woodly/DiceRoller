@@ -25,9 +25,13 @@ namespace DiceRoller
             InitializeComponent();
         }
 
-        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        
+
+        private void rollButton_Click(object sender, RoutedEventArgs e)
         {
-            rollResult.Content = numberOfSides.Value.ToString();
+            Dice dice = new Dice();
+            rollResult.Content = dice.RollDice((int)numberOfSides.Value).ToString();
+            
         }
     }
 }

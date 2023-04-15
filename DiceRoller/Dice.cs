@@ -8,5 +8,11 @@ namespace DiceRoller
 {
     class Dice
     {
+        Random random = new Random();
+        
+         public int RollDice(int numberOfSides)
+        {
+            return  random.Next(1,numberOfSides);
+        }
     }
 }

@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DiceRoller"
         mc:Ignorable="d"
+        Icon="Dice-256 (1).png"
         Title="DiceRoller v1.0" Height="300" Width="500" Background="#FFC8C8C8">
+        
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -21,10 +23,10 @@
 
         </StackPanel>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
-            <Slider x:Name="numberOfSides" Margin="0,6,0,0" VerticalAlignment="Center" FontSize="20" Maximum="20" Minimum="2" SmallChange="1" TickPlacement="BottomRight" IsSnapToTickEnabled="True" AutoToolTipPlacement="TopLeft" Foreground="Black" ValueChanged="Slider_ValueChanged"/>
-            <Label Content="How many sides ?" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="0,0,0,10"/>
+            <Label Content="How many sides ?" d:LayoutOverrides="Width, Height" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="0,0,0,5"/>
+            <Slider x:Name="numberOfSides" VerticalAlignment="Center" FontSize="20" Maximum="20" Minimum="2" SmallChange="1" TickPlacement="BottomRight" IsSnapToTickEnabled="True" AutoToolTipPlacement="TopLeft" Foreground="Black" Value="1"/>
         </StackPanel>
-        <Button x:Name="rollButton" Content="Roll it !" HorizontalAlignment="Center" Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Center" FontSize="30" FontFamily="Arial"/>
+        <Button x:Name="rollButton" Content="Roll it !" HorizontalAlignment="Center" Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Center" FontSize="30" FontFamily="Arial" Click="rollButton_Click"/>
 
     </Grid>
 </Window>
