@@ -24,5 +24,10 @@ namespace DiceRoller
         {
             InitializeComponent();
         }
+
+        private void Slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            rollResult.Content = numberOfSides.Value.ToString();
+        }
     }
 }
